@@ -11,7 +11,7 @@ const Conditions = ({ isFirst }) => {
           : 'bg-[url("/conditions2bg.webp")]'
       } p-5 xl:p-20 flex flex-col gap-5 bg-cover`}
     >
-      <div className="flex ">
+      <div className="flex max-h-auto md:max-h-[340px]">
         <div className="rounded-xl w-full bg-white flex flex-col-reverse md:flex-row justify-between overflow-hidden">
           {isFirst ? (
             <p className="flex text-base sm:text-xl items-center p-5">
@@ -32,11 +32,11 @@ const Conditions = ({ isFirst }) => {
             alt="conditions1"
             width={413}
             height={201}
-            className="w-full md:w-fit"
+            className="w-full md:w-auto"
           />
         </div>
       </div>
-      <div className="flex justify-end">
+      <div className="flex max-h-auto md:max-h-[340px]">
         <div className="rounded-xl w-full bg-white flex flex-col-reverse md:flex-row justify-between overflow-hidden">
           {isFirst ? (
             <p className="flex text-base sm:text-xl items-center p-5">
@@ -55,11 +55,11 @@ const Conditions = ({ isFirst }) => {
             alt="conditions1"
             width={413}
             height={201}
-            className="w-full md:w-fit"
+            className="w-full md:w-auto"
           />
         </div>
       </div>
-      <div className="flex ">
+      <div className="flex max-h-auto md:max-h-[340px]">
         <div className="rounded-xl w-full bg-white flex flex-col-reverse md:flex-row justify-between overflow-hidden">
           {isFirst ? (
             <p className="flex text-base sm:text-xl items-center p-5">
@@ -80,11 +80,11 @@ const Conditions = ({ isFirst }) => {
             alt="conditions1"
             width={413}
             height={201}
-            className="w-full md:w-fit"
+            className="w-full md:w-auto"
           />
         </div>
       </div>
-      <div className="flex justify-end">
+      <div className="flex max-h-auto md:max-h-[340px]">
         <div className="rounded-xl w-full bg-white flex flex-col-reverse md:flex-row justify-between overflow-hidden">
           {isFirst ? (
             <p className="flex text-base sm:text-xl items-center p-5">
@@ -102,7 +102,7 @@ const Conditions = ({ isFirst }) => {
             alt="conditions1"
             width={413}
             height={201}
-            className="w-full md:w-fit"
+            className="w-full md:w-auto"
           />
         </div>
       </div>
