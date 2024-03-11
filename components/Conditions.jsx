@@ -7,8 +7,8 @@ const Conditions = ({ isFirst }) => {
     id="conditions"
       className={`${
         isFirst
-          ? 'bg-[url("/conditions1bg.webp")]'
-          : 'bg-[url("/conditions2bg.webp")]'
+          ? 'bg-[url("/png/conditions1bg.png")]'
+          : 'bg-[url("/png/conditions2bg.png")]'
       } p-5 xl:p-20 flex flex-col gap-5 bg-cover`}
     >
       <div className="flex max-h-auto md:max-h-[340px]">
@@ -51,7 +51,7 @@ const Conditions = ({ isFirst }) => {
             </p>
           )}
           <Image
-            src="/conditions2.webp"
+            src={isFirst ? "/conditions2.webp" : "/conditions5.webp"}
             alt="conditions1"
             width={413}
             height={201}
@@ -76,7 +76,7 @@ const Conditions = ({ isFirst }) => {
             </p>
           )}
           <Image
-            src="/conditions3.webp"
+            src={isFirst ? "/conditions3.webp" : "/conditions6.webp"}
             alt="conditions1"
             width={413}
             height={201}
@@ -98,7 +98,7 @@ const Conditions = ({ isFirst }) => {
             </p>
           )}
           <Image
-            src={isFirst ? "/conditions4.webp" : '/conditions5.webp'}
+            src={isFirst ? "/conditions4.webp" : '/conditions7.webp'}
             alt="conditions1"
             width={413}
             height={201}

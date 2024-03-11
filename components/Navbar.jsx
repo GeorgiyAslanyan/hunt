@@ -10,7 +10,8 @@ const Navbar = () => {
   return (
     <div className="bg-[#8B7B61] bg-opacity-60 backdrop-blur-lg fixed z-50 top-0 w-full text-white">
       <div className="py-4 px-4 lg:px-12 flex items-center justify-between ">
-        <h1>Logo</h1>
+        <Image src={"/logo.svg"} alt="logo" width={211} height={40} className={"hidden sm:block"}/>
+        <Image src={"/logoMobile.svg"} alt="logo" width={40} height={40} className={"block sm:hidden"}/>
         <div className="lg:flex gap-7 items-center hidden">
         <a className="hover:-translate-y-1 ease-linear duration-100 transition-all" href="#nature">природа</a>
           <a className="hover:-translate-y-1 ease-linear duration-100 transition-all" href="#term">сроки охоты</a>

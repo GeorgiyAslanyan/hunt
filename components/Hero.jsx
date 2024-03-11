@@ -3,7 +3,7 @@ import React from "react";
 
 const Hero = ({ isFirst }) => {
   return (
-    <div className={`h-[80vh] md:h-screen p-5 lg:p-20 text-white relative ${isFirst ? "bg-[url('/hero.webp')]" : "bg-[url('/hero2.webp')]"} bg-cover`}>
+    <div className={`h-[80vh] md:h-screen p-5 lg:p-20 text-white relative ${isFirst ? "bg-[url('/png/hero.png')]" : "bg-[url('/png/hero2.png')]"} bg-cover`}>
       <div className="h-full flex flex-col gap-8 justify-end lg:justify-center z-10 relative">
         {isFirst ? (
           <h1 className="text-white font-semibold text-3xl sm:text-5xl leading-[1.2]">

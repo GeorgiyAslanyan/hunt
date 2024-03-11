@@ -41,28 +41,28 @@ const Nature = ({ isFirst }) => {
           alt="nature1"
           width={278}
           height={171}
-          className="w-full  rounded-2xl"
+          className="w-full  rounded-3xl"
         />
         <Image
           src="/nature2.webp"
           alt="nature2"
           width={278}
           height={171}
-          className="w-full -mt-5 rounded-2xl"
+          className="w-full -mt-5 rounded-3xl"
         />
         <Image
           src="/nature3.webp"
           alt="nature3"
           width={278}
           height={171}
-          className="w-full  rounded-2xl"
+          className="w-full  rounded-3xl"
         />
         <Image
           src="/nature4.webp"
           alt="nature4"
           width={278}
           height={171}
-          className="w-full -mt-5 rounded-2xl"
+          className="w-full -mt-5 rounded-3xl"
         />
       </div> : <div className="hidden col-span-9 xl:col-span-4 md:grid grid-cols-2 gap-6">
         <Image
@@ -70,28 +70,28 @@ const Nature = ({ isFirst }) => {
           alt="nature5"
           width={278}
           height={171}
-          className="w-full  rounded-2xl"
+          className="w-full  rounded-3xl"
         />
         <Image
           src="/nature6.webp"
           alt="nature6"
           width={278}
           height={171}
-          className="w-full -mt-5 rounded-2xl"
+          className="w-full -mt-5 rounded-3xl"
         />
         <Image
           src="/nature7.webp"
           alt="nature7"
           width={278}
           height={171}
-          className="w-full  rounded-2xl"
+          className="w-full  rounded-3xl"
         />
         <Image
           src="/nature8.webp"
           alt="nature8"
           width={278}
           height={171}
-          className="w-full -mt-5 rounded-2xl"
+          className="w-full -mt-5 rounded-3xl"
         />
       </div>}
     </div>
