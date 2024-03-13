@@ -1,10 +1,9 @@
-import Image from "next/image";
 import React from "react";
 
 const Conditions = ({ isFirst }) => {
   return (
     <div
-    id="conditions"
+      id={isFirst ? "conditions" : "conditions2"}
       className={`${
         isFirst
           ? 'bg-[url("/png/conditions1bg.png")]'
@@ -27,8 +26,8 @@ const Conditions = ({ isFirst }) => {
               можно взять в аренду охотничье оборудование.
             </p>
           )}
-          <Image
-            src="/conditions1.webp"
+          <img
+            src={isFirst ? "/conditions/conditions1.webp" : "/conditions/conditions5.webp"}
             alt="conditions1"
             width={413}
             height={201}
@@ -42,16 +41,17 @@ const Conditions = ({ isFirst }) => {
             <p className="flex text-base sm:text-xl items-center p-5">
               В угодьях созданы все условия для увлекательной и комфортной охоты
               на любой вкус. Наличие лошадей даёт возможность организовать охоту
-              в труднодоступных районах охотхозяйства.
+              в труднодоступных районах охотхозяйства, а также организовать
+              конные прогулки по живописным местам охотхозяйства.
             </p>
           ) : (
             <p className="flex text-base sm:text-xl items-center p-5">
-              В угодьях созданы все условия для увлекательной и комфортной охоты
-              на любой вкус.
+              В охотхозяйстве Айдарлы созданы все условия для увлекательного и
+              комфортного отдыха на любой вкус.
             </p>
           )}
-          <Image
-            src={isFirst ? "/conditions2.webp" : "/conditions5.webp"}
+          <img
+            src={isFirst ? "/conditions/conditions2.webp" : "/conditions/conditions6.webp"}
             alt="conditions1"
             width={413}
             height={201}
@@ -63,20 +63,22 @@ const Conditions = ({ isFirst }) => {
         <div className="rounded-xl w-full bg-white flex flex-col-reverse md:flex-row justify-between overflow-hidden">
           {isFirst ? (
             <p className="flex text-base sm:text-xl items-center p-5">
-              По прибытии в охотхозяйство гости располагаются в рубленных
-              комфортабельных домиках со всеми удобствами: отопление, санузлы,
-              холодная, горячая вода, хорошие спальные места, постельное бельё,
-              организовано трёхразовое питание, досуг.
+              По прибытии в охотхозяйство гости имеют возможность расположиться
+              как в рубленных комфортабельных домиках со всеми удобствами:
+              отопление, санузлы, холодная, горячая вода, хорошие спальные
+              места, постельное бельё, организовано трёхразовое питание, досуг,
+              так и устроить кемпинг в специально отведённых местах.
             </p>
           ) : (
             <p className="flex text-base sm:text-xl items-center p-5">
-              По прибытии в охотхозяйство, гости располагаются в доме охотника с
-              хорошими спальными местами, постельным бельём, организовано
-              трёхразовое питание, досуг.
+              По прибытии в охотхозяйство, гости располагаются в охотничьем
+              домике с хорошими спальными местами, постельным бельём,
+              организованным трёхразовым питанием, досугом или в кемпинге в
+              специально отведённых местах.
             </p>
           )}
-          <Image
-            src={isFirst ? "/conditions3.webp" : "/conditions6.webp"}
+          <img
+            src={isFirst ? "/conditions/conditions3.webp" : "/conditions/conditions7.webp"}
             alt="conditions1"
             width={413}
             height={201}
@@ -89,16 +91,16 @@ const Conditions = ({ isFirst }) => {
           {isFirst ? (
             <p className="flex text-base sm:text-xl items-center p-5">
               Роскошная природа гор и предоставленные комфортные условия сделают
-              впечатления об охоте незабываемыми.
+              впечатления об охоте и отдыхе незабываемыми.
             </p>
           ) : (
             <p className="flex text-base sm:text-xl items-center p-5">
               Роскошная природа, хорошие условия для ночлега и отдыха,
-              полноценное питание сделают впечатления об охоте незабываемыми.
+              полноценное питание сделают впечатления об отдыхе незабываемыми.
             </p>
           )}
-          <Image
-            src={isFirst ? "/conditions4.webp" : '/conditions7.webp'}
+          <img
+            src={isFirst ? "/conditions/conditions4.webp" : "/conditions/conditions8.webp"}
             alt="conditions1"
             width={413}
             height={201}

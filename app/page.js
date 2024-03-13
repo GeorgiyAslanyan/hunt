@@ -4,23 +4,16 @@ import Hero from "@/components/Hero";
 import Modal from "@/components/Modal";
 import Nature from "@/components/Nature";
 import Term from "@/components/Term";
-import Image from "next/image";
+import Term2 from "@/components/Term2";
 import { useState } from "react";
 
 export default function Home() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isFirst, setIsFirst] = useState(false)
-
-  const handleClick = ({first}) => {
-    first ? setIsFirst(true) : setIsFirst(false)
-    setIsOpen(true)
-  }
-
+ 
   return (
     <main className="">
       <Hero isFirst={true} />
       <Nature isFirst={true} />
-      <Term isFirst={true} />
+      <Term />
       <Conditions isFirst={true} />
       <div className="max-w-screen p-3 md:p-10 grid grid-cols-3 gap-5 justify-center">
         <div className="col-span-3 lg:col-span-2 ">
@@ -36,15 +29,14 @@ export default function Home() {
         ></iframe>
         </div>
         <div className="col-span-3 lg:col-span-1 flex  items-center lg:items-start flex-col gap-5 w-full">
-          <Image src={"/map.png"} alt="map" width={1920} height={1080} className="rounded-xl shadow-2xl"/>
-          <button onClick={() => handleClick({first: true})} className="rounded-2xl bg-[#8B7B61] hover:bg-[#B5A872] text-white px-5 py-3 w-fit">
+          <button  className="rounded-2xl bg-[#8B7B61] hover:bg-[#B5A872] text-white px-5 py-3 w-fit">
             Посмотреть карту местности
           </button>
         </div>
       </div>
       <Hero />
       <Nature />
-      <Term />
+      <Term2 />
       <Conditions />
       <div className="max-w-screen p-3 md:p-10 grid grid-cols-3 gap-5 justify-center">
         <div className="col-span-3 lg:col-span-2">
@@ -60,13 +52,11 @@ export default function Home() {
         ></iframe>
         </div>
         <div className="col-span-3 lg:col-span-1 flex items-center lg:items-start flex-col gap-5 w-full">
-          <Image src={"/map2.png"} alt="map" width={1920} height={1080} className="rounded-xl shadow-2xl"/>
-          <button onClick={() => handleClick({first: false})} className="rounded-2xl bg-[#8B7B61] hover:bg-[#B5A872] text-white px-5 py-3 w-fit">
+          <button className="rounded-2xl bg-[#8B7B61] hover:bg-[#B5A872] text-white px-5 py-3 w-fit">
             Посмотреть карту местности
           </button>
         </div>
       </div>
-      {isOpen && <Modal setIsOpen={setIsOpen} isOpen={isOpen} isFirst={isFirst}/>}
     </main>
   );
 }

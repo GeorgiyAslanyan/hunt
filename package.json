@@ -6,12 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "export": "next export",
     "lint": "next lint"
   },
   "dependencies": {
     "leaflet": "^1.9.4",
     "leaflet-defaulticon-compatibility": "^0.1.2",
     "next": "14.1.2",
+    "next-optimized-images": "^2.6.2",
     "react": "^18",
     "react-dom": "^18",
     "react-leaflet": "^4.2.1"

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 
 const Modal = ({ isFirst, setIsOpen, isOpen }) => {
@@ -8,7 +7,7 @@ const Modal = ({ isFirst, setIsOpen, isOpen }) => {
       className="fixed z-[100] top-0 left-0 flex items-center justify-center w-screen h-screen backdrop-blur-lg bg-black bg-opacity-60 sm:p-5 p-2"
     >
       <div className="relative w-full h-fit lg:w-[80%] lg:h-[90%]">
-        <Image
+        <img
           src={isFirst ? "/map.webp" : "/map2.png"}
           alt={"map"}
           width={1236}

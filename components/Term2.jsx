@@ -1,8 +1,8 @@
 import React from "react";
 
-const Term = ({ isFirst }) => {
+const Term2 = ({ isFirst }) => {
   return (
-    <div id="term" className="flex flex-col gap-10 p-5 xl:p-20">
+    <div id="term2" className="flex flex-col gap-10 p-5 xl:p-20">
       <h2 className="font-semibold text-3xl sm:text-5xl">
         Сроки проведения охоты
       </h2>
@@ -10,7 +10,35 @@ const Term = ({ isFirst }) => {
         <div className="flex flex-col gap-5">
           <div className="relative shadow-xl rounded-md overflow-hidden group">
             <img
-              src="/term/kosulya.webp"
+              src="/term/utki.webp"
+              alt="term1"
+              width={413}
+              height={313}
+              className="w-full group-hover:scale-105 ease-linear duration-150 transition-all"
+            />
+            <div className="absolute bottom-4 left-4 flex flex-col gap-2">
+              <p className="text-xl font-bold">Водоплавающая дичь</p>
+              <p className="text-xl">15.09. – 31.12</p>
+            </div>
+          </div>
+          <div className="relative shadow-xl rounded-md overflow-hidden group">
+            <img
+              src="/term/zayac2.webp"
+              alt="term2"
+              width={413}
+              height={201}
+              className="w-full group-hover:scale-105 ease-linear duration-150 transition-all"
+            />
+            <div className="absolute bottom-4 left-4 flex flex-col gap-2">
+              <p className="text-xl font-bold">Заяц</p>
+              <p className="text-xl">01.11. – 31.01</p>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col gap-5">
+          <div className="relative shadow-xl rounded-md overflow-hidden group">
+            <img
+              src="/term/kosulya2.webp"
               alt="term1"
               width={413}
               height={313}
@@ -23,56 +51,15 @@ const Term = ({ isFirst }) => {
           </div>
           <div className="relative shadow-xl rounded-md overflow-hidden group">
             <img
-              src="/term/surok.webp"
-              alt="term2"
-              width={413}
-              height={201}
-              className="w-full group-hover:scale-105 ease-linear duration-150 transition-all"
-            />
-            <div className="absolute bottom-4 left-4 flex flex-col gap-2">
-              <p className="text-xl font-bold">Сурок</p>
-              <p className="text-xl">01.11. – 31.01</p>
-            </div>
-          </div>
-          <div className="relative shadow-xl rounded-md overflow-hidden group">
-            <img
               src="/term/kaban.webp"
               alt="term2"
               width={413}
               height={201}
-              className="w-full group-hover:scale-105 ease-linear duration-150 transition-all"
+              className="w-full xl:h-[201px] group-hover:scale-105 ease-linear duration-150 transition-all"
             />
             <div className="absolute bottom-4 left-4 flex flex-col gap-2">
               <p className="text-xl font-bold">Кабан</p>
               <p className="text-xl">04.09. – 31.12</p>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col gap-5">
-          <div className="relative shadow-xl rounded-md overflow-hidden group">
-            <img
-              src="/term/kozel.webp"
-              alt="term1"
-              width={413}
-              height={313}
-              className="w-full group-hover:scale-105 ease-linear duration-150 transition-all"
-            />
-            <div className="absolute bottom-4 left-4 flex flex-col gap-2">
-              <p className="text-xl font-bold">Горный сибирский козел </p>
-              <p className="text-xl">15.07. – 31.12</p>
-            </div>
-          </div>
-          <div className="relative shadow-xl rounded-md overflow-hidden group">
-            <img
-              src="/term/zayac.webp"
-              alt="term2"
-              width={413}
-              height={201}
-              className="w-full group-hover:scale-105 ease-linear duration-150 transition-all"
-            />
-            <div className="absolute bottom-4 left-4 flex flex-col gap-2">
-              <p className="text-xl font-bold">Заяц</p>
-              <p className="text-xl">01.11. – 31.01</p>
             </div>
           </div>
           <div className="relative shadow-xl rounded-md overflow-hidden group">
@@ -92,20 +79,20 @@ const Term = ({ isFirst }) => {
         <div className="flex flex-col md:flex-row xl:flex-col col-span-1 md:col-span-2 xl:col-span-1 gap-5">
           <div className="relative shadow-xl rounded-md overflow-hidden h-full group w-full">
             <img
-              src="/term/maral.webp"
+              src="/term/fazan.webp"
               alt="term1"
               width={413}
               height={313}
               className="w-full h-full rounded-md scale-105 group-hover:scale-110 ease-linear duration-150 transition-all"
             />
             <div className="absolute bottom-4 left-4 flex flex-col gap-2">
-              <p className="text-xl font-bold">Марал</p>
-              <p className="text-xl">15.07. – 31.12</p>
+              <p className="text-xl font-bold">Фазан</p>
+              <p className="text-xl">01.11. – 31.12</p>
             </div>
           </div>
           
           <div className="relative shadow-xl rounded-md overflow-hidden bg-[#665F46] p-5 h-full w-full">
-          <div className="border-[6px] rounded-md border-[#CFBB67] group hover:border-[#8B7B61] ease-linear duration-150 transition-all h-full flex flex-col justify-between">
+            <div className="border-[6px] rounded-md border-[#CFBB67] group hover:border-[#8B7B61] ease-linear duration-150 transition-all h-full flex flex-col justify-between">
               <div className="w-full h-full justify-center text-center flex flex-col gap-3 p-5">
                 <p className="font-bold text-xl">
                   Сроки могут <br /> корректироваться
@@ -129,4 +116,4 @@ const Term = ({ isFirst }) => {
   );
 };
 
-export default Term;
+export default Term2;
