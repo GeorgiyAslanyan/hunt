@@ -65,7 +65,7 @@ const Navbar = () => {
         </div>
         <div className="flex gap-10 items-center">
           <a
-            href="https://wa.me/77071112232"
+            href="https://wa.me/77017576636"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:block hover:-translate-y-1 ease-linear duration-100 transition-all"
