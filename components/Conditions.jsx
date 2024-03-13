@@ -6,8 +6,8 @@ const Conditions = ({ isFirst }) => {
       id={isFirst ? "conditions" : "conditions2"}
       className={`${
         isFirst
-          ? 'bg-[url("/png/conditions1bg.png")]'
-          : 'bg-[url("/png/conditions2bg.png")]'
+          ? 'bg-[url("/conditions1bg.webp")]'
+          : 'bg-[url("/conditions2bg.webp")]'
       } p-5 xl:p-20 flex flex-col gap-5 bg-cover`}
     >
       <div className="flex max-h-auto md:max-h-[340px]">
