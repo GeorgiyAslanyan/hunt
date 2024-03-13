@@ -58,7 +58,7 @@ export default function Home() {
               onClick={() => setFirstCoords(index)}
               className={`${index === firstCoords && "bg-[#B5A872]"} whitespace-nowrap rounded-2xl bg-[#8B7B61] hover:bg-[#B5A872] text-white px-3 py-3 w-full`}
             >
-              {index === 0 ? "Какпак" : <p>Координата {index}</p>}
+              {index === 0 ? <p className="font-semibold">Какпак</p> : <p>Граница {index}</p>}
             </button>
           ))}
           </div>
@@ -89,7 +89,7 @@ export default function Home() {
               onClick={() => setSecondCoords(index)}
               className={`${index === secondCoords && "bg-[#B5A872]"} w-full whitespace-nowrap rounded-2xl bg-[#8B7B61] hover:bg-[#B5A872] text-white px-3 py-3`}
             >
-              {index === 0 ? "Айдарлы" : <p>Координата {index}</p>}
+              {index === 0 ? <p className="font-semibold">Айдарлы</p> : <p>Граница {index}</p>}
             </button>
           ))}
           </div>

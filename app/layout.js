@@ -7,7 +7,7 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Elitehunting",
-  description: "Загонная и индивидуальная охота в Кокбельсу и Айдарлы",
+  description: "Любительская, спортивная и трофейная охота в охотхозяйстве",
 };
 
 export default function RootLayout({ children }) {
