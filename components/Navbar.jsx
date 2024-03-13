@@ -249,7 +249,7 @@ const Navbar = () => {
           <a href="tel:+7(701)757-66-36">+7 (701) 757-66-36</a>
           <a href="tel:2970902">297-09-02</a>
           <a
-            href="https://wa.me/77071112232"
+            href="https://wa.me/77017576636"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -105,7 +105,7 @@ const Term = ({ isFirst }) => {
           </div>
           
           <div className="relative shadow-xl rounded-md overflow-hidden bg-[#665F46] p-5 h-full w-full">
-          <div className="border-[6px] rounded-md border-[#CFBB67] group hover:border-[#8B7B61] ease-linear duration-150 transition-all h-full flex flex-col justify-between">
+          <div className="border-[6px] rounded-md border-[#CFBB67] group hover:border-[#B5A872] ease-linear duration-150 transition-all h-full flex flex-col justify-between">
               <div className="w-full h-full justify-center text-center flex flex-col gap-3 p-5">
                 <p className="font-bold text-xl">
                   Сроки могут <br /> корректироваться
@@ -116,10 +116,10 @@ const Term = ({ isFirst }) => {
                 </p>
               </div>
               <a
-                href="http://wa.me/77071112232"
+                href="https://wa.me/77017576636"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#CFBB67] items-center flex justify-center font-bold text-2xl group-hover:bg-[#8B7B61] ease-linear duration-150 transition-all text-white px-5 py-3 w-full text-center"
+                className="bg-[#CFBB67] items-center flex justify-center font-bold text-2xl group-hover:bg-[#B5A872] ease-linear duration-150 transition-all text-white px-5 py-3 w-full text-center"
               >Запросить условия</a>
             </div>
           </div>

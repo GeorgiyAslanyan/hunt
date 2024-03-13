@@ -13,7 +13,7 @@ const Hero = ({ isFirst }) => {
              Любительская, спортивная и трофейная <br /> охота в охотхозяйстве Айдарлы
           </h1>
         )}
-        <a className="rounded-2xl bg-[#8B7B61] hover:bg-[#B5A872] text-white px-5 py-3 w-fit" href="https://wa.me/77071112232" target="_blank" rel="noopener noreferrer">Запросить условия</a>
+        <a className="rounded-2xl bg-[#8B7B61] hover:bg-[#B5A872] text-white px-5 py-3 w-fit" href="https://wa.me/77017576636" target="_blank" rel="noopener noreferrer">Запросить условия</a>
         <p className="text-xl leading-[1.5]">
          
          Обязательным условием участия в охоте является наличие у охотника{" "}
