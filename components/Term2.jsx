@@ -1,10 +1,14 @@
 import React from "react";
 
-const Term2 = ({ isFirst }) => {
+const Term2 = ({ isFirst, selectedLanguage }) => {
   return (
     <div id="term2" className="flex flex-col gap-10 p-5 xl:p-20">
       <h2 className="font-semibold text-3xl sm:text-5xl">
-        Сроки проведения охоты
+      {selectedLanguage === 0
+                ? "Сроки проведения охоты"
+                : selectedLanguage === 1
+                ? "The timing of the hunt"
+                : selectedLanguage === 2 ? "Dates de la chasse" : "Fechas de caza"}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 text-white">
         <div className="flex flex-col gap-5">
@@ -17,7 +21,11 @@ const Term2 = ({ isFirst }) => {
               className="w-full group-hover:scale-105 ease-linear duration-150 transition-all"
             />
             <div className="absolute bottom-4 left-4 flex flex-col gap-2">
-              <p className="text-xl font-bold">Водоплавающая дичь</p>
+              <p className="text-xl font-bold">{selectedLanguage === 0
+                ? "Водоплавающая дичь"
+                : selectedLanguage === 1
+                ? "Waterfowl"
+                : selectedLanguage === 2 ? "Sauvagine" : "Caza acuática"}</p>
               <p className="text-xl">15.09. – 31.12</p>
             </div>
           </div>
@@ -30,7 +38,11 @@ const Term2 = ({ isFirst }) => {
               className="w-full group-hover:scale-105 ease-linear duration-150 transition-all"
             />
             <div className="absolute bottom-4 left-4 flex flex-col gap-2">
-              <p className="text-xl font-bold">Заяц</p>
+              <p className="text-xl font-bold">{selectedLanguage === 0
+                ? "Заяц"
+                : selectedLanguage === 1
+                ? "Hare"
+                : selectedLanguage === 2 ? "Lièvre" : "Liebre"}</p>
               <p className="text-xl">01.11. – 31.01</p>
             </div>
           </div>
@@ -45,7 +57,11 @@ const Term2 = ({ isFirst }) => {
               className="w-full group-hover:scale-105 ease-linear duration-150 transition-all"
             />
             <div className="absolute bottom-4 left-4 flex flex-col gap-2">
-              <p className="text-xl font-bold">Косуля</p>
+              <p className="text-xl font-bold">{selectedLanguage === 0
+                ? "Косуля"
+                : selectedLanguage === 1
+                ? "Roe deer"
+                : selectedLanguage === 2 ? "Chevreuil" : "Corza"}</p>
               <p className="text-xl">15.07. – 31.12</p>
             </div>
           </div>
@@ -58,7 +74,11 @@ const Term2 = ({ isFirst }) => {
               className="w-full xl:h-[201px] group-hover:scale-105 ease-linear duration-150 transition-all"
             />
             <div className="absolute bottom-4 left-4 flex flex-col gap-2">
-              <p className="text-xl font-bold">Кабан</p>
+              <p className="text-xl font-bold">{selectedLanguage === 0
+                ? "Кабан"
+                : selectedLanguage === 1
+                ? "Wild boar"
+                : selectedLanguage === 2 ? "Sanglier" : "Jabalí"}</p>
               <p className="text-xl">04.09. – 31.12</p>
             </div>
           </div>
@@ -71,7 +91,11 @@ const Term2 = ({ isFirst }) => {
               className="w-full group-hover:scale-105 ease-linear duration-150 transition-all"
             />
             <div className="absolute bottom-4 left-4 flex flex-col gap-2">
-              <p className="text-xl font-bold">Барсук</p>
+              <p className="text-xl font-bold">{selectedLanguage === 0
+                ? "Барсук"
+                : selectedLanguage === 1
+                ? "Badger"
+                : selectedLanguage === 2 ? "Blaireau" : "Tejón"}</p>
               <p className="text-xl">04.09. – 31.12</p>
             </div>
           </div>
@@ -86,7 +110,11 @@ const Term2 = ({ isFirst }) => {
               className="w-full h-full rounded-md scale-105 group-hover:scale-110 ease-linear duration-150 transition-all"
             />
             <div className="absolute bottom-4 left-4 flex flex-col gap-2">
-              <p className="text-xl font-bold">Фазан</p>
+              <p className="text-xl font-bold">{selectedLanguage === 0
+                ? "Фазан"
+                : selectedLanguage === 1
+                ? "Pheasant"
+                : selectedLanguage === 2 ? "Faisan" : "Faisán"}</p>
               <p className="text-xl">01.11. – 31.12</p>
             </div>
           </div>
@@ -94,12 +122,24 @@ const Term2 = ({ isFirst }) => {
           <div className="relative shadow-xl rounded-md overflow-hidden bg-[#665F46] p-5 h-full w-full">
             <div className="border-[6px] rounded-md border-[#CFBB67] group hover:border-[#B5A872] ease-linear duration-150 transition-all h-full flex flex-col justify-between">
               <div className="w-full h-full justify-center text-center flex flex-col gap-3 p-5">
-                <p className="font-bold text-xl">
-                  Сроки могут <br /> корректироваться
+              <p className="font-bold text-xl">
+                {selectedLanguage === 0
+                ? "Сроки могут"
+                : selectedLanguage === 1
+                ? "Deadlines can"
+                : selectedLanguage === 2 ? "Le calendrier" : "Los plazos"} <br /> {selectedLanguage === 0
+                  ? "корректироваться"
+                  : selectedLanguage === 1
+                  ? "be adjusted"
+                  : selectedLanguage === 2 ? "peut être ajusté" : "pueden ajustarse"}
                 </p>
                 <p className="hidden sm:block">
-                  Для дополнительной информации просим Вас связаться с нами по
-                  вышеуказанным контактам.
+                {selectedLanguage === 0
+                  ? "Для дополнительной информации просим Вас связаться с нами по вышеуказанным контактам."
+                  : selectedLanguage === 1
+                  ? "For more information, please contact us at to the above contacts."
+                  : selectedLanguage === 2 ? "Pour plus d'informations, veuillez nous contacter au aux contacts ci-dessus." : "Para más información, póngase en contacto con nosotros en los contactos mencionados."}
+                  
                 </p>
               </div>
               <a
@@ -107,7 +147,11 @@ const Term2 = ({ isFirst }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#CFBB67] items-center flex justify-center font-bold text-2xl group-hover:bg-[#B5A872] ease-linear duration-150 transition-all text-white px-5 py-3 w-full text-center"
-              >Запросить условия</a>
+              >{selectedLanguage === 0
+                ? "Запросить условия"
+                : selectedLanguage === 1
+                ? "Request conditions"
+                : selectedLanguage === 2 ? "Demander des conditions" : "Solicitar condiciones"}</a>
             </div>
           </div>
         </div>

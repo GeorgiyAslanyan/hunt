@@ -1,13 +1,12 @@
 "use client";
 import React, { useEffect } from "react";
 
-const Navbar = () => {
+const Navbar = ({selectedLanguage, setSelectedlanguage}) => {
   const [scrollY, setScrollY] = React.useState(0);
 
   const [open, setOpen] = React.useState(false);
   const [openNumber, setOpenNumber] = React.useState(false);
   const [modalOpen, setModalOpen] = React.useState(false);
-  const [languageSelected, setLanguageSelected] = React.useState(0);
   const [isFirst, setIsFirst] = React.useState(true);
 
   const handleScroll = () => {
@@ -48,19 +47,31 @@ const Navbar = () => {
             className="hover:-translate-y-1 ease-linear duration-100 transition-all"
             href={isFirst ? "#nature" : "#nature2"}
           >
-            природа
+            {selectedLanguage === 0
+                ? "природа"
+                : selectedLanguage === 1
+                ? "nature"
+                : selectedLanguage === 2 ? "nature" : "naturaleza"}
           </a>
           <a
             className="hover:-translate-y-1 ease-linear duration-100 transition-all"
             href={isFirst ? "#term" : "#term2"}
           >
-            сроки охоты
+            {selectedLanguage === 0
+                ? "сроки охоты"
+                : selectedLanguage === 1
+                ? "the timing of the hunt"
+                : selectedLanguage === 2 ? "chronologie de la chasse" : "tiempo de caza"}
           </a>
           <a
             className="hover:-translate-y-1 ease-linear duration-100 transition-all"
             href={isFirst ? "#conditions" : "#conditions2"}
           >
-            условия
+            {selectedLanguage === 0
+                ? "условия"
+                : selectedLanguage === 1
+                ? "conditions"
+                : selectedLanguage === 2 ? "conditions" : "condiciones"}
           </a>
         </div>
         <div className="flex gap-10 items-center">
@@ -142,19 +153,19 @@ const Navbar = () => {
               className=""
               alt="lang"
               src={
-                languageSelected === 0
+                selectedLanguage === 0
                   ? "/ru.svg"
-                  : languageSelected === 1
-                  ? "/kz.svg"
-                  : "/en.svg"
+                  : selectedLanguage === 1
+                  ? "/en.svg"
+                  : selectedLanguage === 2 ? "/fr.svg" : "/sp.svg"
               }
             />
             <p className="hidden sm:block">
-              {languageSelected === 0
+              {selectedLanguage === 0
                 ? "RU"
-                : languageSelected === 1
-                ? "KZ"
-                : "EN"}
+                : selectedLanguage === 1
+                ? "EN"
+                : selectedLanguage === 2 ? "FR" : "ES"}
             </p>{" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -173,7 +184,7 @@ const Navbar = () => {
             {open && (
               <div className="absolute top-10 rounded-lg overflow-hidden text-white flex flex-col right-0">
                 <p
-                  onClick={() => setLanguageSelected(0)}
+                  onClick={() => setSelectedlanguage(0)}
                   className="bg-[#B5A872] hover:bg-[#8B7B61] py-1 pr-9 pl-2 flex gap-3"
                 >
                   <img
@@ -186,20 +197,7 @@ const Navbar = () => {
                   RU
                 </p>
                 <p
-                  onClick={() => setLanguageSelected(1)}
-                  className="bg-[#B5A872] hover:bg-[#8B7B61] py-1 pr-9 pl-2 flex gap-3"
-                >
-                  <img
-                    width={17}
-                    height={17}
-                    className=""
-                    alt="lang"
-                    src="/kz.svg"
-                  />{" "}
-                  KZ
-                </p>
-                <p
-                  onClick={() => setLanguageSelected(2)}
+                  onClick={() => setSelectedlanguage(1)}
                   className="bg-[#B5A872] hover:bg-[#8B7B61] py-1 pr-9 pl-2 flex gap-3"
                 >
                   <img
@@ -210,6 +208,32 @@ const Navbar = () => {
                     src="/en.svg"
                   />{" "}
                   EN
+                </p>
+                <p
+                  onClick={() => setSelectedlanguage(2)}
+                  className="bg-[#B5A872] hover:bg-[#8B7B61] py-1 pr-9 pl-2 flex gap-3"
+                >
+                  <img
+                    width={17}
+                    height={17}
+                    className=""
+                    alt="lang"
+                    src="/fr.svg"
+                  />{" "}
+                  FR
+                </p>
+                <p
+                  onClick={() => setSelectedlanguage(3)}
+                  className="bg-[#B5A872] hover:bg-[#8B7B61] py-1 pr-9 pl-2 flex gap-3"
+                >
+                  <img
+                    width={17}
+                    height={17}
+                    className=""
+                    alt="lang"
+                    src="/sp.svg"
+                  />{" "}
+                  ES
                 </p>
               </div>
             )}
@@ -242,9 +266,21 @@ const Navbar = () => {
           onClick={() => setModalOpen(!modalOpen)}
           className="flex lg:hidden flex-col gap-4 px-4 pb-4"
         >
-          <a href={isFirst ? "#nature" : "#nature2"}>природа</a>
-          <a href={isFirst ? "#term" : "#term2"}>сроки охоты</a>
-          <a href={isFirst ? "#conditions" : "#conditions2"}>условия</a>
+          <a href={isFirst ? "#nature" : "#nature2"}>{selectedLanguage === 0
+                ? "природа"
+                : selectedLanguage === 1
+                ? "nature"
+                : selectedLanguage === 2 ? "nature" : "naturaleza"}</a>
+          <a href={isFirst ? "#term" : "#term2"}>{selectedLanguage === 0
+                ? "сроки охоты"
+                : selectedLanguage === 1
+                ? "the timing of the hunt"
+                : selectedLanguage === 2 ? "chronologie de la chasse" : "tiempo de caza"}</a>
+          <a href={isFirst ? "#conditions" : "#conditions2"}>{selectedLanguage === 0
+                ? "условия"
+                : selectedLanguage === 1
+                ? "conditions"
+                : selectedLanguage === 2 ? "conditions" : "condiciones"}</a>
           <a href="tel:+7(701)788-43-17">+7 (701) 788-43-17</a>
           <a href="tel:+7(701)757-66-36">+7 (701) 757-66-36</a>
           <a href="tel:2970902">297-09-02</a>

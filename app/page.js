@@ -3,6 +3,7 @@ import Conditions from "@/components/Conditions";
 import Hero from "@/components/Hero";
 import Modal from "@/components/Modal";
 import Nature from "@/components/Nature";
+import Navbar from "@/components/Navbar";
 import Term from "@/components/Term";
 import Term2 from "@/components/Term2";
 import { useState } from "react";
@@ -32,12 +33,16 @@ const secondArr = [
 export default function Home() {
   const [firstCoords, setFirstCoords] = useState(0);
   const [secondCoords, setSecondCoords] = useState(0);
+  const [selectedLanguage, setSelectedlanguage] = useState(0);
+
   return (
+    <>
+    <Navbar selectedLanguage={selectedLanguage} setSelectedlanguage={setSelectedlanguage} />
     <main className="">
-      <Hero isFirst={true} />
-      <Nature isFirst={true} />
-      <Term />
-      <Conditions isFirst={true} />
+      <Hero selectedLanguage={selectedLanguage} isFirst={true} />
+      <Nature selectedLanguage={selectedLanguage} isFirst={true} />
+      <Term selectedLanguage={selectedLanguage} />
+      <Conditions selectedLanguage={selectedLanguage} isFirst={true} />
       <div className="max-w-screen p-3 md:p-10 grid grid-cols-3 gap-5 justify-center">
         <div className="col-span-3 lg:col-span-2 ">
           <iframe
@@ -58,16 +63,24 @@ export default function Home() {
               onClick={() => setFirstCoords(index)}
               className={`${index === firstCoords && "bg-[#B5A872]"} whitespace-nowrap rounded-2xl bg-[#8B7B61] hover:bg-[#B5A872] text-white px-3 py-3 w-full`}
             >
-              {index === 0 ? <p className="font-semibold">Какпак</p> : <p>Граница {index}</p>}
+              {index === 0 ? <p className="font-semibold">{selectedLanguage === 0
+                ? "Какпак"
+                : selectedLanguage === 1
+                ? "Kakpak"
+                : selectedLanguage === 2 ? "Kakpak" : "Kakpak"}</p> : <p>{selectedLanguage === 0
+                ? "Граница"
+                : selectedLanguage === 1
+                ? "Border"
+                : selectedLanguage === 2 ? "Frontière" : "Frontera"} {index}</p>}
             </button>
           ))}
           </div>
         </div>
       </div>
-      <Hero />
-      <Nature />
-      <Term2 />
-      <Conditions />
+      <Hero selectedLanguage={selectedLanguage} />
+      <Nature selectedLanguage={selectedLanguage} />
+      <Term2 selectedLanguage={selectedLanguage} />
+      <Conditions selectedLanguage={selectedLanguage} />
       <div className="max-w-screen p-3 md:p-10 grid grid-cols-3 gap-5 justify-center">
         <div className="col-span-3 lg:col-span-2">
           <iframe
@@ -89,12 +102,21 @@ export default function Home() {
               onClick={() => setSecondCoords(index)}
               className={`${index === secondCoords && "bg-[#B5A872]"} w-full whitespace-nowrap rounded-2xl bg-[#8B7B61] hover:bg-[#B5A872] text-white px-3 py-3`}
             >
-              {index === 0 ? <p className="font-semibold">Айдарлы</p> : <p>Граница {index}</p>}
+              {index === 0 ? <p className="font-semibold">{selectedLanguage === 0
+                ? "Айдарлы"
+                : selectedLanguage === 1
+                ? "Aydarly"
+                : selectedLanguage === 2 ? "Aydarly" : "Aydarly"}</p> : <p>{selectedLanguage === 0
+                ? "Граница"
+                : selectedLanguage === 1
+                ? "Border"
+                : selectedLanguage === 2 ? "Frontière" : "Frontera"} {index}</p>}
             </button>
           ))}
           </div>
         </div>
       </div>
     </main>
+    </>
   );
 }
